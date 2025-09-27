@@ -1,4 +1,4 @@
-import pickle
+import joblib
 import numpy as np
 import os
 from flask import Flask, render_template, request, jsonify
@@ -24,16 +24,13 @@ CORS(app)
 # Mapeo de clases para estilos de aprendizaje
 CLASS_LABELS = {0: "Visual", 1: "Auditivo", 2: "Kinestésico", 3: "Lectura/Escritura"}
 
-# Cargar modelo entrenado
+# Cargar modelo entrenado y scaler
 try:
-    with open("random_forest_learningstyle.pkl", "rb") as file:
-        model = pickle.load(file)
+    model = joblib.load("random_forest_learningstyle.joblib")
     logger.info("Modelo cargado exitosamente")
 
-    # Cargar el scaler
     try:
-        with open("scaler_learningstyle.pkl", "rb") as file:
-            scaler = pickle.load(file)
+        scaler = joblib.load("scaler_learningstyle.joblib")
         logger.info("Scaler cargado exitosamente")
         SCALER_AVAILABLE = True
     except Exception as e:

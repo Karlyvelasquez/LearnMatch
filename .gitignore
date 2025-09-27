@@ -32,8 +32,8 @@ instance/
 .webassets-cache
 
 # Modelos de ML
+*.pkl
 
-*.joblib
 *.model
 
 # Logs
