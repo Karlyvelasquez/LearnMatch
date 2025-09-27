@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnMatch - Predicción de Estilos de Aprendizaje</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>LearnMatch</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#estadisticas" class="nav-link">Estadísticas</a>
+                <a href="#caracteristicas" class="nav-link">Características</a>
+                <a href="#como-funciona" class="nav-link">¿Cómo funciona?</a>
+                <a href="#prediccion" class="nav-link">Predicción</a>
+                <a href="#equipo" class="nav-link">Equipo</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+     
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>LearnMatch</span>
+                </div>
+                <h1 class="hero-title">
+                    Descubre tu 
+                    <span class="gradient-text">Estilo de Aprendizaje</span>
+                    con Inteligencia Artificial
+                </h1>
+                <p class="hero-description">
+                    LearnMatch utiliza modelos de Machine Learning para identificar tu estilo de aprendizaje 
+                    dominante y te proporciona estrategias personalizadas para optimizar tu proceso educativo.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#prediccion" class="btn btn-primary">
+                        <i class="fas fa-brain"></i>
+                        Descubrir mi estilo
+                    </a>
+                    <a href="#caracteristicas" class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        Conocer más
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Precisión</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Estilos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Disponible</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <i class="fas fa-eye"></i>
+                    <span>Visual</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-headphones"></i>
+                    <span>Auditivo</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-hands"></i>
+                    <span>Kinestésico</span>
+                </div>
+                <div class="floating-card card-4">
+                    <i class="fas fa-book"></i>
+                    <span>Lectura/Escritura</span>
+                </div>
+                <div class="hero-circle"></div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="estadisticas" class="statistics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Datos sobre Estilos de Aprendizaje</h2>
+                <p>Estadísticas que revelan la importancia de conocer tu forma de aprender</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                     <!-- CHANGE> Fixed animated numbers with proper data attributes -->
+                    <div class="stat-number animated-number" data-target="65">0</div>
+                    <div class="stat-text">% de estudiantes son aprendices visuales</div>
+                    <div class="stat-source">Fuente: Learning Styles Research, 2023</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-number animated-number" data-target="40">0</div>
+                    <div class="stat-text">% mejora en rendimiento al conocer su estilo</div>
+                    <div class="stat-source">Journal of Educational Psychology</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number animated-number" data-target="30">0</div>
+                    <div class="stat-text">% prefiere aprendizaje auditivo</div>
+                    <div class="stat-source">Educational Research International</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <div class="stat-number animated-number" data-target="5">0</div>
+                    <div class="stat-text">% son aprendices kinestésicos puros</div>
+                    <div class="stat-source">Learning Modalities Study</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="caracteristicas" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Características principales</h2>
+                <p>Tecnología avanzada para personalizar tu aprendizaje</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Predicción con IA</h3>
+                    <p>Algoritmos de Machine Learning que analizan tus preferencias de aprendizaje para identificar tu estilo dominante.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Estrategias Personalizadas</h3>
+                    <p>Recomendaciones específicas basadas en tu estilo de aprendizaje para maximizar tu potencial educativo.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Análisis Completo</h3>
+                    <p>Evaluación integral de tus preferencias visuales, auditivas, kinestésicas y de lectura/escritura.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Recursos Adaptativos</h3>
+                    <p>Herramientas y técnicas específicas que se ajustan a tu forma natural de procesar información.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="como-funciona" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Cómo funciona LearnMatch?</h2>
+                <p>Un proceso simple y científicamente respaldado</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Evaluación de Preferencias</h3>
+                        <p>Completas un cuestionario sobre tus preferencias de aprendizaje y métodos de estudio favoritos.</p>
+                        <div class="step-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Análisis con IA</h3>
+                        <p>Nuestro modelo analiza tus respuestas para identificar patrones en tu forma de procesar información.</p>
+                        <div class="step-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Identificación del Estilo</h3>
+                        <p>Determinas si eres Visual, Auditivo, Kinestésico o de Lectura/Escritura como estilo dominante.</p>
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Estrategias Personalizadas</h3>
+                        <p>Recibes un plan de estudio adaptado y recursos específicos para tu estilo de aprendizaje.</p>
+                        <div class="step-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="prediccion" class="prediction-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Descubre tu estilo de aprendizaje</h2>
+                <p>Completa el formulario para obtener tu predicción personalizada</p>
+            </div>
+        
+            <div class="simple-form-container">
+                <form id="learningForm" class="learning-form">
+                <div class="form-grid">
+
+               
+                <div class="form-group">
+                    <label for="StudyHours">
+                        <i class="fas fa-clock"></i>
+                        Horas de estudio diarias
+                        <span class="field-description">¿Cuántas horas dedicas al estudio por día?</span>
+                    </label>
+                    <input type="range" id="StudyHours" name="StudyHours" min="0" max="12" step="1" value="2" class="custom-slider">
+                    <div class="slider-value"><span id="StudyHoursValue">2</span> horas</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Attendance">
+                        <i class="fas fa-calendar-check"></i>
+                        Asistencia a clases
+                        <span class="field-description">Porcentaje de clases a las que asistes</span>
+                    </label>
+                    <input type="range" id="Attendance" name="Attendance" min="0" max="100" step="5" value="80" class="custom-slider">
+                    <div class="slider-value"><span id="AttendanceValue">80</span>%</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Resources">
+                        <i class="fas fa-book"></i>
+                        Uso de recursos de estudio
+                        <span class="field-description">Frecuencia con la que usas libros, videos, apps educativas</span>
+                    </label>
+                    <input type="range" id="Resources" name="Resources" min="0" max="10" step="1" value="5" class="custom-slider">
+                    <div class="slider-value"><span id="ResourcesValue">5</span> / 10</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Extracurricular">
+                        <i class="fas fa-users"></i>
+                        Actividades extracurriculares
+                        <span class="field-description">Participación en clubes, deportes, voluntariado</span>
+                    </label>
+                    <input type="range" id="Extracurricular" name="Extracurricular" min="0" max="10" step="1" value="5" class="custom-slider">
+                    <div class="slider-value"><span id="ExtracurricularValue">5</span> / 10</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Motivation">
+                        <i class="fas fa-fire"></i>
+                        Nivel de motivación
+                        <span class="field-description">Qué tan motivado te sientes para estudiar</span>
+                    </label>
+                    <input type="range" id="Motivation" name="Motivation" min="0" max="10" step="1" value="5" class="custom-slider">
+                    <div class="slider-value"><span id="MotivationValue">5</span> / 10</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Internet">
+                        <i class="fas fa-wifi"></i>
+                        Acceso a internet
+                        <span class="field-description">¿Tienes acceso confiable a internet para estudiar?</span>
+                    </label>
+                    <select id="Internet" name="Internet" class="custom-select">
+                        <option value="0">No tengo acceso</option>
+                        <option value="1" selected>Sí tengo acceso</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Gender">
+                        <i class="fas fa-user"></i>
+                        Género
+                        <span class="field-description">Información demográfica para el análisis</span>
+                    </label>
+                    <select id="Gender" name="Gender" class="custom-select">
+                        <option value="0" selected>Femenino</option>
+                        <option value="1">Masculino</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Age">
+                        <i class="fas fa-birthday-cake"></i>
+                        Edad
+                        <span class="field-description">Tu edad actual en años</span>
+                    </label>
+                    <input type="range" id="Age" name="Age" min="16" max="40" step="1" value="20" class="custom-slider">
+                    <div class="slider-value"><span id="AgeValue">20</span> años</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="OnlineCourses">
+                        <i class="fas fa-laptop"></i>
+                        Cursos en línea completados
+                        <span class="field-description">Número de cursos online que has terminado</span>
+                    </label>
+                    <input type="range" id="OnlineCourses" name="OnlineCourses" min="0" max="10" step="1" value="2" class="custom-slider">
+                    <div class="slider-value"><span id="OnlineCoursesValue">2</span> cursos</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Discussions">
+                        <i class="fas fa-comments"></i>
+                        Participación en discusiones
+                        <span class="field-description">Qué tanto participas en debates y discusiones académicas</span>
+                    </label>
+                    <input type="range" id="Discussions" name="Discussions" min="0" max="10" step="1" value="5" class="custom-slider">
+                    <div class="slider-value"><span id="DiscussionsValue">5</span> / 10</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="AssignmentCompletion">
+                        <i class="fas fa-tasks"></i>
+                        Tareas completadas
+                        <span class="field-description">Porcentaje de tareas que entregas a tiempo</span>
+                    </label>
+                    <input type="range" id="AssignmentCompletion" name="AssignmentCompletion" min="0" max="100" step="5" value="90" class="custom-slider">
+                    <div class="slider-value"><span id="AssignmentCompletionValue">90</span>%</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ExamScore">
+                        <i class="fas fa-graduation-cap"></i>
+                        Puntaje promedio en exámenes
+                        <span class="field-description">Tu calificación promedio en exámenes</span>
+                    </label>
+                    <input type="range" id="ExamScore" name="ExamScore" min="0" max="100" step="5" value="70" class="custom-slider">
+                    <div class="slider-value"><span id="ExamScoreValue">70</span> puntos</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="EduTech">
+                        <i class="fas fa-tablet-alt"></i>
+                        Uso de tecnología educativa
+                        <span class="field-description">¿Usas apps, plataformas digitales para estudiar?</span>
+                    </label>
+                    <select id="EduTech" name="EduTech" class="custom-select">
+                        <option value="0">No uso tecnología</option>
+                        <option value="1" selected>Sí uso tecnología</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="StressLevel">
+                        <i class="fas fa-thermometer-half"></i>
+                        Nivel de estrés académico
+                        <span class="field-description">Qué tan estresado te sientes con los estudios</span>
+                    </label>
+                    <input type="range" id="StressLevel" name="StressLevel" min="1" max="10" step="1" value="5" class="custom-slider">
+                    <div class="slider-value"><span id="StressLevelValue">5</span> / 10</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="FinalGrade">
+                        <i class="fas fa-star"></i>
+                        Promedio académico actual
+                        <span class="field-description">Tu promedio general en una escala de 0 a 5</span>
+                    </label>
+                    <input type="range" id="FinalGrade" name="FinalGrade" min="0" max="5" step="0.1" value="3.5" class="custom-slider">
+                    <div class="slider-value"><span id="FinalGradeValue">3.5</span> / 5.0</div>
+                </div>
+                </div>
+
+                    <button type="submit" class="btn btn-primary btn-large" id="predictBtn">
+                        <i class="fas fa-magic"></i>
+                        <span>Descubrir mi Estilo de Aprendizaje</span>
+                        <div class="loading-spinner"></div>
+                    </button>
+                </form>
+
+                 
+                <div class="results-container" id="resultsContainer" style="display: none;">
+                    <div class="result-card" id="resultCard">
+                        <div class="result-icon" id="resultIcon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Tu estilo de aprendizaje</h3>
+                        <div class="result-level" id="resultLevel">
+                             Result will be inserted here 
+                        </div>
+                        <div class="result-description" id="resultDescription">
+                             Description will be inserted here 
+                        </div>
+                        <div class="result-recommendations" id="resultRecommendations">
+                             Recommendations will be inserted here 
+                        </div>
+                        
+                        <div class="result-actions">
+                            <button class="btn btn-secondary" id="getFeedbackBtn">
+                                <i class="fas fa-comments"></i>
+                                Quiero estrategias personalizadas
+                            </button>
+                            <button class="btn btn-outline" id="restartBtn">
+                                <i class="fas fa-redo"></i>
+                                Nueva evaluación
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="feedback-container" id="feedbackContainer" style="display: none;">
+                    <div class="feedback-card">
+                        <div class="feedback-header">
+                            <i class="fas fa-user-circle"></i>
+                            <h3>Cuéntanos más sobre ti</h3>
+                            <p>Para darte estrategias más personalizadas</p>
+                        </div>
+                        
+                        <form id="feedbackForm" class="feedback-form">
+                            <div class="feedback-grid">
+                                <div class="form-group">
+                                    <label>¿En qué rango de edad te encuentras?</label>
+                                    <select id="age_range" name="age_range" required>
+                                        <option value="">Selecciona tu edad</option>
+                                        <option value="16-18">16-18 años</option>
+                                        <option value="19-21">19-21 años</option>
+                                        <option value="22-24">22-24 años</option>
+                                        <option value="25-27">25-27 años</option>
+                                        <option value="28+">28+ años</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>¿Qué carrera estudias?</label>
+                                    <input type="text" id="career" name="career" placeholder="Ej: Ingeniería, Psicología, Medicina..." required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>¿En qué semestre/año estás?</label>
+                                    <select id="academic_level" name="academic_level" required>
+                                        <option value="">Selecciona</option>
+                                        <option value="1-2">1° - 2° semestre</option>
+                                        <option value="3-4">3° - 4° semestre</option>
+                                        <option value="5-6">5° - 6° semestre</option>
+                                        <option value="7-8">7° - 8° semestre</option>
+                                        <option value="9+">9° semestre o más</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>¿Cuáles son tus actividades favoritas?</label>
+                                    <textarea id="hobbies" name="hobbies" placeholder="Ej: Leer, videojuegos, música, deportes, arte..." rows="3" required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>¿Vives solo/a o con familia/compañeros?</label>
+                                    <select id="living_situation" name="living_situation" required>
+                                        <option value="">Selecciona</option>
+                                        <option value="family">Con familia</option>
+                                        <option value="roommates">Con compañeros/roommates</option>
+                                        <option value="alone">Solo/a</option>
+                                        <option value="partner">Con pareja</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>¿Trabajas mientras estudias?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-option">
+                                            <input type="radio" name="work_status" value="full-time" required>
+                                            <span>Tiempo completo</span>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="work_status" value="part-time" required>
+                                            <span>Medio tiempo</span>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="work_status" value="occasional" required>
+                                            <span>Ocasionalmente</span>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="work_status" value="no" required>
+                                            <span>No trabajo</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label>¿Qué dificultades tienes para aprender?</label>
+                                    <textarea id="learning_challenges" name="learning_challenges" placeholder="Ej: Concentración, memorización, comprensión de textos..." rows="3" required></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large" id="generateFeedbackBtn">
+                                <i class="fas fa-sparkles"></i>
+                                <span>Generar estrategias personalizadas</span>
+                                <div class="loading-spinner"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+              
+                <div class="ai-feedback-container" id="aiFeedbackContainer" style="display: none;">
+                    <div class="ai-feedback-card">
+                        <div class="ai-feedback-header">
+                            <i class="fas fa-robot"></i>
+                            <h3>Estrategias personalizadas con IA</h3>
+                            <p>Plan de aprendizaje adaptado a tu estilo</p>
+                        </div>
+                        
+                        <div class="ai-feedback-content" id="aiFeedbackContent">
+                             AI generated content will be inserted here 
+                        </div>
+                        
+                        <div class="ai-feedback-actions">
+                            <button class="btn btn-primary" id="newAnalysisBtn">
+                                <i class="fas fa-redo"></i>
+                                Nueva evaluación
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+            <div class="team-mission">
+                <div class="mission-content">
+                    <h3>Nuestra Misión</h3>
+                    <p>
+                        Creemos que cada persona tiene una forma única de aprender. LearnMatch nació para ayudar a estudiantes 
+                        a descubrir su estilo de aprendizaje dominante y proporcionarles las herramientas necesarias para 
+                        maximizar su potencial educativo a través de estrategias personalizadas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="faq" class="faq-chat">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pregúntale a LearnMatch</h2>
+                <p>¡Elige la pregunta frecuente y conoce más!</p>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-avatar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="chat-info">
+                        <h3>LearnMatch Assistant</h3>
+                        <span class="status">
+                            <div class="status-dot"></div>
+                            En línea
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-bubble">
+                                ¡Hola! 👋 Soy el asistente de LearnMatch. Elige una pregunta y con gusto responderé
+                            </div>
+                            <div class="message-time">Ahora</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-questions">
+                    <div class="question-suggestions">
+                        <p>Preguntas frecuentes:</p>
+                        <div class="suggestion-chips">
+                            <button class="chip" data-question="styles">
+                                <i class="fas fa-question"></i>
+                                ¿Qué estilos de aprendizaje existen?
+                            </button>
+                            <button class="chip" data-question="accuracy">
+                                <i class="fas fa-target"></i>
+                                ¿Qué tan precisa es la predicción?
+                            </button>
+                            <button class="chip" data-question="change">
+                                <i class="fas fa-sync"></i>
+                                ¿Puede cambiar mi estilo?
+                            </button>
+                            <button class="chip" data-question="multiple">
+                                <i class="fas fa-users"></i>
+                                ¿Puedo tener múltiples estilos?
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>LearnMatch</span>
+                    </div>
+                    <p>Tecnología avanzada para descubrir y optimizar tu estilo de aprendizaje personal.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Producto</h4>
+                        <a href="#caracteristicas">Características</a>
+                        <a href="#prediccion">Evaluación</a>
+                        <a href="#como-funciona">Cómo Funciona</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Soporte</h4>
+                        <a href="#faq">FAQ</a>
+                        <a href="#">Ayuda</a>
+                        <a href="#">Comunidad</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LearnMatch. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
