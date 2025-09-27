@@ -7,6 +7,39 @@ from dotenv import load_dotenv
 from openai import OpenAI
 import traceback
 import logging
+import os
+import gdown
+import pickle  
+
+# Rutas locales
+MODEL_PATH = "random_forest_learningstyle.pkl"
+SCALER_PATH = "scaler_learningstyle.pkl"
+
+# IDs de Google Drive
+MODEL_FILE_ID = "1DmoFfFjCseNLu7Hzkf7NWRyHYOmKHU9B"
+SCALER_FILE_ID = "18HnGg1sefBMQEglf2LmoB3TrVxhfePER"
+
+# URLs directas para gdown
+MODEL_URL = f"https://drive.google.com/uc?id={MODEL_FILE_ID}"
+SCALER_URL = f"https://drive.google.com/uc?id={SCALER_FILE_ID}"
+
+def download_if_not_exists(path, url):
+    if not os.path.exists(path):
+        print(f" Descargando {path} desde Google Drive...")
+        gdown.download(url, path, quiet=False)
+    else:
+        print(f"{path} ya existe localmente")
+
+# Descargamos si es necesario
+download_if_not_exists(MODEL_PATH, MODEL_URL)
+download_if_not_exists(SCALER_PATH, SCALER_URL)
+
+# Luego carga los archivos normalmente
+with open(MODEL_PATH, "rb") as f:
+    model = pickle.load(f)
+
+with open(SCALER_PATH, "rb") as f:
+    scaler = pickle.load(f)
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO)
