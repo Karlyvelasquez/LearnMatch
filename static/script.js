@@ -692,5 +692,5 @@ document.addEventListener("DOMContentLoaded", () => {
   animateNumbers()
   testModelOnStartup()
 
-  console.log("LearnMatch iniciado con todas las funcionalidades corregidas")
+  console.log("IA-Match iniciado con todas las funcionalidades corregidas")
 })
